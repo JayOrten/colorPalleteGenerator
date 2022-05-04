@@ -1,6 +1,6 @@
 app.component('color-tab', {
 	props: {
-		ncolor: {
+		hex: {
 			type: String,
 			required: true,
 			default: "#1d2621"
@@ -10,7 +10,7 @@ app.component('color-tab', {
 	data() {
 		return {
 			colorStyle: {
-				backgroundColor: this.hexName
+				backgroundColor: this.hex
 			}
 		}
 	},
@@ -26,8 +26,8 @@ app.component('color-tab', {
 
 	methods: {
 		copy() {
-			navigator.clipboard.writeText(this.hexName);
-			this.$emit('copy-click', this.hexName);
+			navigator.clipboard.writeText(this.hex);
+			this.$emit('copy-click', this.hex);
 		}
 	},
 
@@ -35,8 +35,8 @@ app.component('color-tab', {
 	},
 
 	watch: {
-		ncolor(newVal) {
-			this.colorStyle.backgroundColor = this.hexName;
+		hex(newVal) {
+			this.colorStyle.backgroundColor = this.hex;
 		}
 	},
 })

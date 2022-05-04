@@ -8,7 +8,7 @@ const app = Vue.createApp({
 				{color : "#1d2621"},
 				{color : "#1d2621"}
 			],
-			fullPallete: " ",
+			fullPallete: "",
 			selectedColor : " ",
 			showToast : false
 		}
@@ -30,6 +30,7 @@ const app = Vue.createApp({
 					var palette = JSON.parse(http.responseText).result;
 					for(let i = 0; i < 5; ++i) {
 						this.colors[i].color = this.rgbToHex(palette[i][0],palette[i][1],palette[i][2]);
+						this.fullPallete = this.fullPallete + " " + this.colors[i].color;
 					}
 				} else {
 					console.log(http.status + " " + http.readyState);
@@ -72,8 +73,8 @@ const app = Vue.createApp({
 			if(e.code == 'Space') {
 				this.refreshColors();
 			} else if(e.code == 'KeyC') {
-				console.log('reached');
 				navigator.clipboard.writeText(this.fullPallete);
+				this.showNotification("palette");
 			}
 		}.bind(this), false);
     },

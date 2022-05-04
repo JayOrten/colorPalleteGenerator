@@ -27,7 +27,7 @@
 				<!-- Insert component -->
 				<div class="flex flex-row gap-6">
 					<div v-for="currentColor in colors">
-						<color-tab :ncolor="currentColor.color" @copy-click="showNotification"></color-tab>
+						<color-tab :hex="currentColor.color" @copy-click="showNotification"></color-tab>
 					</div>
 				</div>
 
