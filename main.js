@@ -16,7 +16,7 @@ const app = Vue.createApp({
 
 	methods: {
 		refreshColors() {
-			var url = "http://colormind.io/api/";
+			var url = "https://colormind.io/api/";
 			var data = {
 				model : "default",
 				input : ["N","N","N","N","N"]
