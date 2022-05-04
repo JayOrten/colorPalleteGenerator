@@ -1,0 +1,28 @@
+{
+  "name": "colorPalleteGenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./assets/styles/styles.css -o ./dist/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JayOrten/colorPalleteGenerator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JayOrten/colorPalleteGenerator/issues"
+  },
+  "homepage": "https://github.com/JayOrten/colorPalleteGenerator#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss-cli": "^9.1.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}

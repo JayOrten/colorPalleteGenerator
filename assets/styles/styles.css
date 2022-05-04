@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fade-enter-active { @apply duration-300 ease-out }
+.fade-enter-from { @apply transform opacity-0 scale-75 }
+.fade-enter-to { @apply opacity-100 scale-100 }
+.fade-leave-active { @apply transform duration-200 ease-in }
+.fade-leave-from { @apply opacity-100 scale-100 }
+.fade-leave-to { @apply opacity-0 scale-75 }
